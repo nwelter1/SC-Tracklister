@@ -1,5 +1,4 @@
 const puppeteer = require('puppeteer');
-
 (async () => {
     // Getting title of track from Soundcloud Link
   const browser = await puppeteer.launch();
@@ -17,10 +16,10 @@ const puppeteer = require('puppeteer');
  //1001Tracklists Section
  await page.goto('https://www.1001tracklists.com/')
  await page.setViewport({width: 1920, height: 1001 })
- //Finding Search Bar
+ //Finding and clicking Search Bar
  await page.waitForSelector('input.search-box-input')
  await page.click('.search-box-input')
- //Filling in searchbar
+ //Filling in searchbar on 1001Tracklists.com
  page.keyboard.type(titleContent)
  //Clicking on top search result
  await page.waitForSelector('.acObjLi')
@@ -36,3 +35,9 @@ const puppeteer = require('puppeteer');
 
  await browser.close();
 })();
+
+/**
+ * Function to make Title from 
+ */
+
+module.exports

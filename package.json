@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "puppeteer": "^5.2.1"
+    "browserify": "^16.5.2",
+    "browserify-shim": "^3.8.14",
+    "puppeteer": "^5.2.1",
+    "ws": "^7.3.1"
   }
 }
