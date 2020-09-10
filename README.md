@@ -13,3 +13,20 @@ Using as a Test to make sure this will actually work.
 As a Web app, SCTracklister will take a Soundcloud URL as a user input, and open an instance of chrome in puppeteer to navigate to the URL given. It will then store the title of the mix. It will then navigate to 1001Tracklists.com, and do the same search/array storage listed above.
 
 Array of tracks displayed on the web page under the input bar.
+
+#### Additions
+
+Added a few packages:
+- Express
+- Bodyparser
+- cors
+- Webpack
+- Webpack-cli
+
+Currently, `server.js` runs a server that with the `npm start` command.
+The current route code can be found in `src/routes` and produces a GET request to the server. It then responds based on the `songTitle` given to it as a parameter to the `/song` route.
+
+The `dist` folder currently holds the code packaged up using webpack (coming from the `src` folder)
+
+The code previously written is still in tact, however changed slightly to allow it to be exported as a module so the router can use it. 
+

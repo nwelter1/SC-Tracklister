@@ -4,15 +4,21 @@
   "description": "",
   "main": "capstone-sc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
     "browserify": "^16.5.2",
     "browserify-shim": "^3.8.14",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "puppeteer": "^5.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
     "ws": "^7.3.1"
   }
 }
