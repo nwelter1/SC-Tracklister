@@ -1,9 +1,13 @@
 const puppeteer = require('puppeteer');
-let test = (async  () => {
+// import puppeteer from 'puppeteer'
+let test = async  (songtitle) => {
     // Getting title of track from Soundcloud Link
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://soundcloud.com/partyfavormusic/party-favor-hard-2018');
+  if(songtitle === 'party-favor-hard-2018'){
+    console.log(songtitle,'They the same boss!')
+  }
+  await page.goto(`https://soundcloud.com/partyfavormusic/${songtitle}`);
   await page.screenshot({ path: 'example.png' });
   await page.waitForSelector('span.soundTitle__title');
 
@@ -33,11 +37,18 @@ let test = (async  () => {
  );
  console.log( tracklistContent )
 
+
  await browser.close();
-})();
+
+ return tracklistContent
+};
+
+
+
 
 /**
  * Function to make Title from 
  */
 
-module.exports = test
+module.exports = test;
+
